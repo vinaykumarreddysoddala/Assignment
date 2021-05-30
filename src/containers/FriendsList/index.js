@@ -85,7 +85,8 @@ class FriendsList extends React.Component {
             }
         } else {
             const upadtedFilterData = [...updatedData.slice(0, 4)];
-            this.setState({ filterData: upadtedFilterData });
+            const lastPage = updatedData.length % 4 === 0 ? updatedData.length / 4 : parseInt((updatedData.length / 4)) + 1;
+            this.setState({ filterData: upadtedFilterData, lastPage });
         }
         this.setState({ friendsData: updatedFriendsData, data: updatedData });
         this.toggleDelete();
