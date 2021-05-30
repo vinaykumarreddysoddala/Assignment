@@ -76,7 +76,10 @@ class FriendsList extends React.Component {
             const upadtedFilterData = [...filterData.filter(friend => friend.id !== deletingId)];
             if (upadtedFilterData.length === 0) {
                 this.handlePaginate(activePage - 1);
-                this.setState({ activePage: activePage - 1, lastPage: lastPage - 1 });
+                this.setState({
+                    activePage: activePage - 1 ? activePage - 1 : 1,
+                    lastPage: lastPage - 1 ? activePage - 1 : 1
+                });
             } else {
                 this.setState({ filterData: upadtedFilterData });
             }
