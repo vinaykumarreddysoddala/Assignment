@@ -1,0 +1,52 @@
+[
+    {
+        "name" : "Vinay",
+        "id": 1,
+        "isFavorite": true
+    },
+    {
+        "name" : "Vishnu",
+        "id": 2,
+        "isFavorite": true
+    },
+    {
+        "name" : "Mohan",
+        "id": 3,
+        "isFavorite": false
+    },
+    {
+        "name" : "Dinesh",
+        "id": 4,
+        "isFavorite": true
+    },
+    {
+        "name" : "Tharun",
+        "id": 5,
+        "isFavorite": false
+    },
+    {
+        "name" : "Praneeth",
+        "id": 6,
+        "isFavorite": false
+    },
+    {
+        "name" : "Rohith",
+        "id": 7,
+        "isFavorite": false
+    },
+    {
+        "name" : "Pandu",
+        "id": 8,
+        "isFavorite": false
+    },
+    {
+        "name" : "Vedanth",
+        "id": 9,
+        "isFavorite": false
+    },
+    {
+        "name" : "Siri",
+        "id": 10,
+        "isFavorite": false
+    }
+]
