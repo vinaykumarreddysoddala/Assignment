@@ -84,7 +84,7 @@ class FriendsList extends React.Component {
                 this.setState({ filterData: upadtedFilterData });
             }
         } else {
-            const upadtedFilterData = [...updatedData.slice(0, 4)];
+            const upadtedFilterData = [...updatedData.slice((activePage - 1) * 4, activePage * 4)];
             const lastPage = updatedData.length % 4 === 0 ? updatedData.length / 4 : parseInt((updatedData.length / 4)) + 1;
             this.setState({ filterData: upadtedFilterData, lastPage });
         }
@@ -94,14 +94,15 @@ class FriendsList extends React.Component {
     }
 
     handleSort = event => {
+        const { friendsData } = this.state;
         if (event.target.value === 'favorites') {
-            const updatedData = data.sort(function (a, b) {
+            const updatedData = friendsData.sort(function (a, b) {
                 return (a.isFavorite === b.isFavorite) ? 0 : a.isFavorite ? -1 : 1;
             });
             const filterData = [...updatedData.slice(0, 4)];
             this.setState({ data: updatedData, filterData, value: '', activePage: 1 });
         } else {
-            const filterData = [...this.state.friendsData.slice(0, 4)];
+            const filterData = [...friendsData.slice(0, 4)];
             this.setState({ data: [...this.state.friendsData], filterData, value: '', activePage: 1 });
         }
     }
